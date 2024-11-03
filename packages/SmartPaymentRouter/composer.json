@@ -1,0 +1,16 @@
+{
+    "name": "blinqpay/smart-payment-router",
+    "description": "A smart routing package for payment gateways.",
+    "type": "library",
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^8.0|^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "blinqpay\\SmartPaymentRouter\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

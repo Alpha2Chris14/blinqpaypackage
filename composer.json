@@ -22,12 +22,14 @@
         "psr-4": {
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
-            "Database\\Seeders\\": "database/seeders/"
+            "Database\\Seeders\\": "database/seeders/",
+            "blinqPay\\SmartPaymentRouter\\": "packages/SmartPaymentRouter/src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\": "tests/"
+            "Tests\\": "tests/",
+            "blinqPay\\SmartPaymentRouter\\Tests\\": "packages/SmartPaymentRouter/tests/"
         }
     },
     "scripts": {

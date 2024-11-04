@@ -15,7 +15,7 @@ class PaymentRouter
 
     public function route($transaction)
     {
-        // Example logic to select the best processor
+        // logic to select the best processor
         $bestProcessor = null;
         $bestCost = PHP_INT_MAX;
 
@@ -33,7 +33,7 @@ class PaymentRouter
 
     protected function calculateCost($transaction, $details)
     {
-        // Example cost calculation logic
+        // cost calculation logic
         return $transaction['amount'] * $details['fee_percentage'];
     }
 }

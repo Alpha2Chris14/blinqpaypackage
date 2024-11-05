@@ -23,7 +23,7 @@
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/",
-            "blinqPay\\SmartPaymentRouter\\": "packages/SmartPaymentRouter/src/"
+            "blinqpay\\SmartPaymentRouter\\": "packages/SmartPaymentRouter/src/"
         }
     },
     "autoload-dev": {

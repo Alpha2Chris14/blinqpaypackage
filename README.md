@@ -25,12 +25,13 @@ To install the `SmartPaymentRouter` package in your Laravel application, follow 
         cd packages/SmartPaymentRouter
         git clone https://github.com/Alpha2Chris14/blinqpaypackage.git
     ```
+    
 
     move the content of the packages folder to your own packages folder
 
 2.  Add the package’s namespace to your application’s composer.json file under the autoload section:
 
-        ```json
+   ```json
             "autoload": {
                 "psr-4": {
                     "App\\": "app/",
@@ -38,18 +39,18 @@ To install the `SmartPaymentRouter` package in your Laravel application, follow 
                 }
 
             }
-        ```
-        After modifying composer.json, run
-
-        ```bash
+   ```
+        
+   After modifying composer.json, run
+   ```bash
          composer dump-autoload
-        ```
-
-        to get the new autoloads
+   ```
+         
+   to get the new autoloads
 
 3.  Service Provider (optional)
 
-    If you have a service provider for registering services or bindings, ensure it's loaded in your Laravel app. You may need to register it in the config/app.php file or in recent version of laravel bootstrap/provider.php.
+    If you have a service provider for registering services or bindings, ensure it's loaded in your Laravel app. You may need to register it in the config/app.php file or in recent version of laravel     bootstrap/provider.php.
 
     ```php
         return [
@@ -97,18 +98,18 @@ Configuration
 Sample Laravel Application Integration
 To create a sample Laravel application that demonstrates the integration of the SmartPaymentRouter package:
 
-    Create a New Laravel Application
+Create a New Laravel Application
+```bash
+    composer create-project --prefer-dist laravel/laravel SampleLaravelApp
+    cd SampleLaravelApp
+```
+    
+or for version 11
+```bash
+    composer global require laravel/installer
+    laravel new SampleLaravelApp
+```
 
-    ```bash
-        composer create-project --prefer-dist laravel/laravel SampleLaravelApp
-        cd SampleLaravelApp
-    ```
-    or for version 11
-
-    ```bash
-        composer global require laravel/installer
-        laravel new SampleLaravelApp
-    ```
 
 Add the Package
 
@@ -116,14 +117,14 @@ Follow the installation steps outlined above to add the SmartPaymentRouter to th
 Set Up a Controller
 
 Create a new controller to handle routing:
-
-    ```bash
+```bash
         php artisan make:controller PaymentController
-    ```
+```
+    
 
 In app/Http/Controllers/PaymentController.php:
 
-    ```php
+```php
         namespace App\Http\Controllers;
 
         use Illuminate\Http\Request;
@@ -153,36 +154,36 @@ In app/Http/Controllers/PaymentController.php:
                 return response()->json(['best_processor' => $bestProcessor]);
             }
         }
-    ```
+```
 
 Define Routes
 
 In routes/web.php, add:
 
-    ```php
+```php
         use App\Http\Controllers\PaymentController;
 
         Route::post('/route-payment', [PaymentController::class, 'routePayment']);
-    ```
+```
 
 Testing the Integration
 
 You can test the integration by sending a POST request to /route-payment with the transaction data:
 
-    ```json
+```json
         {
         "amount": 100,
         "currency": "USD",
         "country": "US"
         }
-    ```
+```
 
 You can use tools like Postman or Curl to test the endpoint.
 
 Testing
 The package includes unit tests located in packages/SmartPaymentRouter/tests. To run the tests:
 
-    ```bash
+```bash
         cd packages/SmartPaymentRouter
         vendor/bin/phpunit --testdox
-    ```
+```

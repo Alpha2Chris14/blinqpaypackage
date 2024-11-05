@@ -20,11 +20,9 @@ To install the `SmartPaymentRouter` package in your Laravel application, follow 
 
     Clone or download this repository into the `packages` directory of your Laravel application:
 
-    ```bash
-    mkdir -p packages/blinqpaypackage
-    cd packages/SmartPaymentRouter
-    git clone https://github.com/Alpha2Chris14/blinqpaypackage.git
-    ```
+    `bash mkdir -p packages/blinqpaypackage `
+    `bash cd packages/SmartPaymentRouter `
+    `bash git clone https://github.com/Alpha2Chris14/blinqpaypackage.git `
 
 2.  Add the package’s namespace to your application’s composer.json file under the autoload section:
 
@@ -40,9 +38,7 @@ To install the `SmartPaymentRouter` package in your Laravel application, follow 
         ```
         After modifying composer.json, run
 
-        ```bash
-        composer dump-autoload
-        ```
+        ```bash composer dump-autoload ```
 
 3.  Service Provider (optional)
 
